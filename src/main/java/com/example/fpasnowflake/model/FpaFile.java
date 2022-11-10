@@ -9,7 +9,7 @@ import lombok.*;
 @AllArgsConstructor
 public class FpaFile {
 
-    private Integer fpaid;
+    private int fpaid;
     private String firstname;
     private String lastname;
     private Integer age;

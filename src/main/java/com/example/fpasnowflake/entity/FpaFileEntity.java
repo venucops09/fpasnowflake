@@ -14,7 +14,7 @@ import javax.persistence.*;
 public class FpaFileEntity {
 
     @Id
-    @Column
+    @Generated
     private int fpaid;
 
     @Column
