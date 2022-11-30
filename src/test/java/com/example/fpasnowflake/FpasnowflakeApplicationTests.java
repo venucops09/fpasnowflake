@@ -13,7 +13,7 @@ class FpasnowflakeApplicationTests {
 	}
 
 	private void doNotThrowException(){
-		//This method will never throw exception
+		//This method will never throw exception -
 	}
 
 }
