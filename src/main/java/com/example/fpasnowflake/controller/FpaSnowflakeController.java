@@ -29,7 +29,7 @@ public class FpaSnowflakeController {
     public List<FpaFile> getFpaFile(){
             return fpaService.getAllFpaFiles();
     }
-
+    /**postfpafile method*/
     @PostMapping(value = "/postFpa", consumes = MediaType.APPLICATION_JSON_VALUE)
     public String postFpaFile(@RequestBody FpaFile fpaFile){
             return fpaService.postFpaFile(fpaFile);
