@@ -18,27 +18,17 @@ public class FpaService implements IFpaService {
 
     @Override
     public FpaFile getFpaFile(int id) {
-        return fpaEntityMapper.toDto(fpaRepository.getFpa(Integer.valueOf(id)));
+        return fpaEntityMapper.toDto(fpaRepository.getFpa(id));
     }
 
     @Override
     public String postFpaFile(FpaFile fpaFile) {
-
-        try{
             fpaRepository.save(fpaEntityMapper.toEntity(fpaFile));
-        }catch (Throwable e){
-            throw e;
-        }
-
         return "successfully saved into the table";
     }
 
     @Override
     public List<FpaFile> getAllFpaFiles() {
-        try {
             return fpaEntityMapper.toDtoList(fpaRepository.getAllFpa());
-        }catch (Throwable e) {
-            throw e;
-        }
     }
 }

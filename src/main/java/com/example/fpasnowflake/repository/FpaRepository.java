@@ -10,7 +10,7 @@ import java.util.List;
 public interface FpaRepository extends JpaRepository<FpaFileEntity, Integer> {
 
     @Query(value = "SELECT FPAID as \"fpaid\", FIRSTNAME as \"firstname\", LASTNAME as \"lastname\", AGE as \"age\" FROM FPA WHERE FPAID = ?", nativeQuery = true)
-    FpaFileEntity getFpa(int id);
+    FpaFileEntity getFpa(Integer id);
 
     @Query(value = "SELECT FPAID as \"fpaid\", FIRSTNAME as \"firstname\", LASTNAME as \"lastname\", AGE as \"age\" FROM FPA", nativeQuery = true)
     List<FpaFileEntity> getAllFpa();
